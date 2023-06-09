@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_partner_age_from_inherit" model="ir.ui.view">
+            <field name="name">view.partner.age.from.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <!--<field name="phone" position="after">-->
+                    <!--<field name="date_of_birth"/>-->
+                <!--</field>-->
+
+                <!--<xpath expr="//group" position="after">
+                    <group>
+                        <field name="date_of_birth"/>
+                        <field name="sex" string="sexo"/>
+                    </group>
+                </xpath>-->
+
+                <xpath expr="//page[@name='sales_purchases']" position="before">
+                    <page string="Datos Personales">
+                        <group>
+                            <group>
+                                <field name="date_of_birth"/>
+                                <field name="sex" string="Sexo"/>
+                            </group>
+                            <group>
+                                <field name="passport"/>
+                                <field name="extranjero"/>
+                            </group>
+                        </group>
+                    </page>
+                        
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,1034 @@
+2023-06-09 03:07:33,758 16764 INFO ? odoo: Odoo version 15.0-20230607 
+2023-06-09 03:07:33,758 16764 INFO ? odoo: Using configuration file at C:\Program Files\Odoo 15.0\server\odoo.conf 
+2023-06-09 03:07:33,758 16764 INFO ? odoo: addons paths: ['C:\\Program Files\\Odoo 15.0\\server\\odoo\\addons', 'c:\\users\\james\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\program files\\odoo 15.0\\server\\odoo\\addons'] 
+2023-06-09 03:07:33,759 16764 INFO ? odoo: database: openpg@localhost:5432 
+2023-06-09 03:07:34,937 16764 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\Odoo 15.0\thirdparty\wkhtmltopdf.exe 
+2023-06-09 03:07:37,754 16764 INFO ? odoo.service.server: Initiating shutdown 
+2023-06-09 03:07:37,754 16764 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2023-06-09 03:07:39,580 22868 INFO ? odoo: Odoo version 15.0-20230607 
+2023-06-09 03:07:39,580 22868 INFO ? odoo: Using configuration file at C:\Program Files\Odoo 15.0\server\odoo.conf 
+2023-06-09 03:07:39,580 22868 INFO ? odoo: addons paths: ['C:\\Program Files\\Odoo 15.0\\server\\odoo\\addons', 'c:\\users\\james\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'c:\\program files\\odoo 15.0\\server\\odoo\\addons'] 
+2023-06-09 03:07:39,580 22868 INFO ? odoo: database: openpg@localhost:5432 
+2023-06-09 03:07:39,773 22868 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\Odoo 15.0\thirdparty\wkhtmltopdf.exe 
+2023-06-09 03:07:40,934 22868 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-C3CAVVI:8069 
+2023-06-09 03:07:42,132 22868 INFO ? odoo.sql_db: Connection to the database failed 
+2023-06-09 03:07:44,189 22868 INFO ? odoo.sql_db: Connection to the database failed 
+2023-06-09 03:13:50,775 22868 INFO ? odoo.http: HTTP Configuring static files 
+2023-06-09 03:13:50,976 22868 INFO Odoo15 odoo.sql_db: Connection to the database failed 
+2023-06-09 03:13:50,976 22868 INFO Odoo15 odoo.http: Generating nondb routing 
+2023-06-09 03:13:51,021 22868 INFO Odoo15 odoo.sql_db: Connection to the database failed 
+2023-06-09 03:13:51,025 22868 INFO Odoo15 werkzeug: 127.0.0.1 - - [09/Jun/2023 03:13:51] "GET / HTTP/1.1" 500 - 0 0.000 0.240
+2023-06-09 03:13:51,039 22868 ERROR Odoo15 werkzeug: Error on request:
+Traceback (most recent call last):
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 61, in __new__
+    return cls.registries[db_name]
+  File "C:\Program Files\Odoo 15.0\server\odoo\tools\func.py", line 71, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Program Files\Odoo 15.0\server\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+KeyError: 'Odoo15'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 1482, in dispatch
+    odoo.registry(db).check_signaling()
+  File "C:\Program Files\Odoo 15.0\server\odoo\__init__.py", line 104, in registry
+    return modules.registry.Registry(database_name)
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 63, in __new__
+    return cls.new(db_name)
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 75, in new
+    registry.init(db_name)
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 151, in init
+    with closing(self.cursor()) as cr:
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 728, in cursor
+    return self._db.cursor()
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 742, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn, serialized=serialized)
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 259, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 603, in _locked
+    return fun(self, *args, **kwargs)
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 671, in borrow
+    **connection_info)
+  File "C:\Program Files\Odoo 15.0\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 61, in __new__
+    return cls.registries[db_name]
+  File "C:\Program Files\Odoo 15.0\server\odoo\tools\func.py", line 71, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Program Files\Odoo 15.0\server\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+KeyError: 'Odoo15'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 1469, in _dispatch_nodb
+    result = request.dispatch()
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 815, in dispatch
+    r = self._call_function(**self.params)
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 368, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "C:\Program Files\Odoo 15.0\server\odoo\service\model.py", line 92, in wrapper
+    if odoo.registry(dbname)._init and not odoo.tools.config['test_enable']:
+  File "C:\Program Files\Odoo 15.0\server\odoo\__init__.py", line 104, in registry
+    return modules.registry.Registry(database_name)
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 63, in __new__
+    return cls.new(db_name)
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 75, in new
+    registry.init(db_name)
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 151, in init
+    with closing(self.cursor()) as cr:
+  File "C:\Program Files\Odoo 15.0\server\odoo\modules\registry.py", line 728, in cursor
+    return self._db.cursor()
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 742, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn, serialized=serialized)
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 259, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 603, in _locked
+    return fun(self, *args, **kwargs)
+  File "C:\Program Files\Odoo 15.0\server\odoo\sql_db.py", line 671, in borrow
+    **connection_info)
+  File "C:\Program Files\Odoo 15.0\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+Exception
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Odoo 15.0\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "C:\Program Files\Odoo 15.0\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Program Files\Odoo 15.0\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "C:\Program Files\Odoo 15.0\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "C:\Program Files\Odoo 15.0\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 1305, in __call__
+    return self.dispatch(environ, start_response)
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 1271, in __call__
+    return self.app(environ, start_wrapped)
+  File "C:\Program Files\Odoo 15.0\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 1498, in dispatch
+    result = _dispatch_nodb()
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 1471, in _dispatch_nodb
+    return request._handle_exception(e)
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 759, in _handle_exception
+    return super(HttpRequest, self)._handle_exception(exception)
+  File "C:\Program Files\Odoo 15.0\server\odoo\http.py", line 301, in _handle_exception
+    raise exception.with_traceback(None) from new_cause
+psycopg2.OperationalError - - -
+2023-06-09 03:13:51,134 22868 INFO Odoo15 odoo.sql_db: Connection to the database failed 
+2023-06-09 03:13:51,137 22868 INFO Odoo15 werkzeug: 127.0.0.1 - - [09/Jun/2023 03:13:51] "GET /favicon.ico HTTP/1.1" 404 - 0 0.000 0.037
+2023-06-09 03:14:33,867 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:33] "GET / HTTP/1.1" 303 - 1 0.004 0.055
+2023-06-09 03:14:34,178 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web HTTP/1.1" 303 - 2 0.005 0.103
+2023-06-09 03:14:34,513 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web/database/selector HTTP/1.1" 200 - 2 0.004 0.329
+2023-06-09 03:14:34,878 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web/static/lib/bootstrap/css/bootstrap.css HTTP/1.1" 200 - - - -
+2023-06-09 03:14:34,878 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web/static/lib/fontawesome/css/font-awesome.css HTTP/1.1" 200 - - - -
+2023-06-09 03:14:34,885 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web/static/lib/bootstrap/js/index.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:34,896 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web/static/lib/bootstrap/js/util.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:34,917 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web/static/lib/popper/popper.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:34,931 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:34] "GET /web/static/lib/jquery/jquery.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,240 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/button.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,242 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/alert.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,250 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/carousel.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,257 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/collapse.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,262 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/dropdown.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,267 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/modal.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,570 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/popover.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,572 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/tooltip.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,584 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/scrollspy.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,585 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/lib/bootstrap/js/tab.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,602 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/src/public/database_manager.js HTTP/1.1" 200 - - - -
+2023-06-09 03:14:35,899 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:14:35] "GET /web/static/img/logo2.png HTTP/1.1" 200 - - - -
+2023-06-09 03:15:07,461 22868 INFO None odoo.service.db: Create database `ServidorPrueba`. 
+2023-06-09 03:15:09,232 22868 INFO ServidorPrueba odoo.modules.loading: loading 1 modules... 
+2023-06-09 03:15:09,233 22868 INFO ServidorPrueba odoo.modules.loading: Loading module base (1/1) 
+2023-06-09 03:15:09,258 22868 INFO ServidorPrueba odoo.modules.registry: module base: creating or updating database tables 
+2023-06-09 03:15:10,674 22868 INFO ServidorPrueba odoo.models: Storing computed values of ir.module.module.menus_by_module 
+2023-06-09 03:15:10,675 22868 INFO ServidorPrueba odoo.models: Storing computed values of ir.module.module.reports_by_module 
+2023-06-09 03:15:10,675 22868 INFO ServidorPrueba odoo.models: Storing computed values of ir.module.module.views_by_module 
+2023-06-09 03:15:10,677 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.display_name 
+2023-06-09 03:15:10,677 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.partner_share 
+2023-06-09 03:15:10,677 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.commercial_partner_id 
+2023-06-09 03:15:10,677 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.commercial_company_name 
+2023-06-09 03:15:10,677 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.currency.decimal_places 
+2023-06-09 03:15:10,681 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.company.logo_web 
+2023-06-09 03:15:10,681 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.company.company_registry 
+2023-06-09 03:15:10,684 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.users.share 
+2023-06-09 03:15:12,300 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res_bank.xml 
+2023-06-09 03:15:12,321 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res.lang.csv 
+2023-06-09 03:15:12,391 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res_lang_data.xml 
+2023-06-09 03:15:12,426 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res_partner_data.xml 
+2023-06-09 03:15:12,494 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res_currency_data.xml 
+2023-06-09 03:15:12,836 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res_company_data.xml 
+2023-06-09 03:15:12,860 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res_users_data.xml 
+2023-06-09 03:15:12,940 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2023-06-09 03:15:12,954 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res_country_data.xml 
+2023-06-09 03:15:13,308 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2023-06-09 03:15:13,323 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2023-06-09 03:15:13,336 22868 INFO ServidorPrueba odoo.modules.loading: loading base/security/base_groups.xml 
+2023-06-09 03:15:13,441 22868 INFO ServidorPrueba odoo.modules.loading: loading base/security/base_security.xml 
+2023-06-09 03:15:13,631 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/base_menus.xml 
+2023-06-09 03:15:13,734 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2023-06-09 03:15:13,772 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_config_views.xml 
+2023-06-09 03:15:13,787 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/res.country.state.csv 
+2023-06-09 03:15:14,655 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2023-06-09 03:15:14,761 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2023-06-09 03:15:14,783 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2023-06-09 03:15:14,806 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2023-06-09 03:15:14,844 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2023-06-09 03:15:14,866 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2023-06-09 03:15:14,891 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2023-06-09 03:15:14,916 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_model_views.xml 
+2023-06-09 03:15:15,044 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2023-06-09 03:15:15,070 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2023-06-09 03:15:15,100 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2023-06-09 03:15:15,125 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_translation_views.xml 
+2023-06-09 03:15:15,161 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2023-06-09 03:15:15,191 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2023-06-09 03:15:15,252 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_default_views.xml 
+2023-06-09 03:15:15,277 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2023-06-09 03:15:15,290 22868 INFO ServidorPrueba odoo.modules.loading: loading base/report/ir_model_report.xml 
+2023-06-09 03:15:15,300 22868 INFO ServidorPrueba odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2023-06-09 03:15:15,312 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2023-06-09 03:15:15,335 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2023-06-09 03:15:15,350 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_module_views.xml 
+2023-06-09 03:15:15,410 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2023-06-09 03:15:15,480 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/ir_module_module.xml 
+2023-06-09 03:15:15,541 22868 INFO ServidorPrueba odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2023-06-09 03:15:15,552 22868 INFO ServidorPrueba odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2023-06-09 03:15:15,562 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2023-06-09 03:15:15,580 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2023-06-09 03:15:15,593 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2023-06-09 03:15:15,611 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2023-06-09 03:15:15,634 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2023-06-09 03:15:15,647 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2023-06-09 03:15:15,664 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_update_translations_views.xml 
+2023-06-09 03:15:15,681 22868 INFO ServidorPrueba odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2023-06-09 03:15:15,699 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/ir_actions_data.xml 
+2023-06-09 03:15:15,708 22868 INFO ServidorPrueba odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2023-06-09 03:15:15,726 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2023-06-09 03:15:15,752 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_company_views.xml 
+2023-06-09 03:15:15,777 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_lang_views.xml 
+2023-06-09 03:15:15,803 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_partner_views.xml 
+2023-06-09 03:15:15,901 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_bank_views.xml 
+2023-06-09 03:15:15,935 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_country_views.xml 
+2023-06-09 03:15:15,971 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_currency_views.xml 
+2023-06-09 03:15:16,008 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_users_views.xml 
+2023-06-09 03:15:16,103 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/ir_property_views.xml 
+2023-06-09 03:15:16,127 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2023-06-09 03:15:16,142 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2023-06-09 03:15:16,170 22868 INFO ServidorPrueba odoo.modules.loading: loading base/views/onboarding_views.xml 
+2023-06-09 03:15:16,199 22868 INFO ServidorPrueba odoo.modules.loading: loading base/security/ir.model.access.csv 
+2023-06-09 03:15:16,371 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base: loading base translation file es for language es_PE 
+2023-06-09 03:15:16,387 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base\i18n\es.po 
+2023-06-09 03:15:17,104 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:17,119 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base\i18n\es_PE.po 
+2023-06-09 03:15:17,557 22868 INFO ServidorPrueba odoo.modules.loading: Module base loaded in 8.32s, 9665 queries 
+2023-06-09 03:15:17,557 22868 INFO ServidorPrueba odoo.modules.loading: 1 modules loaded in 8.32s, 9665 queries (+0 extra) 
+2023-06-09 03:15:17,611 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base: loading base translation file es for language es_PE 
+2023-06-09 03:15:17,611 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base\i18n\es.po 
+2023-06-09 03:15:18,300 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:18,300 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base\i18n\es_PE.po 
+2023-06-09 03:15:18,652 22868 INFO ServidorPrueba odoo.modules.loading: updating modules list 
+2023-06-09 03:15:18,652 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2023-06-09 03:15:19,412 22868 INFO ServidorPrueba odoo.modules.loading: loading 7 modules... 
+2023-06-09 03:15:19,412 22868 INFO ServidorPrueba odoo.modules.loading: Loading module web (2/7) 
+2023-06-09 03:15:19,456 22868 INFO ServidorPrueba odoo.modules.registry: module web: creating or updating database tables 
+2023-06-09 03:15:19,941 22868 INFO ServidorPrueba odoo.modules.loading: loading web/security/ir.model.access.csv 
+2023-06-09 03:15:19,957 22868 INFO ServidorPrueba odoo.modules.loading: loading web/views/webclient_templates.xml 
+2023-06-09 03:15:20,024 22868 INFO ServidorPrueba odoo.modules.loading: loading web/views/report_templates.xml 
+2023-06-09 03:15:20,107 22868 INFO ServidorPrueba odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2023-06-09 03:15:20,128 22868 INFO ServidorPrueba odoo.modules.loading: loading web/views/speedscope_template.xml 
+2023-06-09 03:15:20,144 22868 INFO ServidorPrueba odoo.modules.loading: loading web/views/lazy_assets.xml 
+2023-06-09 03:15:20,155 22868 INFO ServidorPrueba odoo.modules.loading: loading web/data/report_layout.xml 
+2023-06-09 03:15:20,193 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web: loading base translation file es for language es_PE 
+2023-06-09 03:15:20,198 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web\i18n\es.po 
+2023-06-09 03:15:20,351 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:20,356 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web\i18n\es_PE.po 
+2023-06-09 03:15:20,425 22868 INFO ServidorPrueba odoo.modules.loading: Module web loaded in 1.01s, 904 queries 
+2023-06-09 03:15:20,425 22868 INFO ServidorPrueba odoo.modules.loading: Loading module auth_totp (3/7) 
+2023-06-09 03:15:20,606 22868 INFO ServidorPrueba odoo.modules.registry: module auth_totp: creating or updating database tables 
+2023-06-09 03:15:20,685 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp/security/security.xml 
+2023-06-09 03:15:20,721 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2023-06-09 03:15:20,743 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2023-06-09 03:15:20,759 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2023-06-09 03:15:20,797 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp/views/templates.xml 
+2023-06-09 03:15:20,816 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2023-06-09 03:15:20,845 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp: loading base translation file es for language es_PE 
+2023-06-09 03:15:20,854 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\auth_totp\i18n\es.po 
+2023-06-09 03:15:20,902 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp: no translation for language es_PE 
+2023-06-09 03:15:20,921 22868 INFO ServidorPrueba odoo.modules.loading: Module auth_totp loaded in 0.50s, 200 queries 
+2023-06-09 03:15:20,921 22868 INFO ServidorPrueba odoo.modules.loading: Loading module base_import (4/7) 
+2023-06-09 03:15:21,105 22868 INFO ServidorPrueba odoo.modules.registry: module base_import: creating or updating database tables 
+2023-06-09 03:15:21,882 22868 INFO ServidorPrueba odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2023-06-09 03:15:21,922 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_import: loading base translation file es for language es_PE 
+2023-06-09 03:15:21,928 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_import\i18n\es.po 
+2023-06-09 03:15:21,972 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_import: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:21,980 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_import\i18n\es_PE.po 
+2023-06-09 03:15:22,023 22868 INFO ServidorPrueba odoo.modules.loading: Module base_import loaded in 1.10s, 938 queries 
+2023-06-09 03:15:22,023 22868 INFO ServidorPrueba odoo.modules.loading: Loading module web_editor (5/7) 
+2023-06-09 03:15:22,350 22868 INFO ServidorPrueba odoo.modules.registry: module web_editor: creating or updating database tables 
+2023-06-09 03:15:22,476 22868 INFO ServidorPrueba odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2023-06-09 03:15:22,492 22868 INFO ServidorPrueba odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2023-06-09 03:15:22,501 22868 INFO ServidorPrueba odoo.modules.loading: loading web_editor/views/editor.xml 
+2023-06-09 03:15:22,532 22868 INFO ServidorPrueba odoo.modules.loading: loading web_editor/views/snippets.xml 
+2023-06-09 03:15:22,569 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_editor: loading base translation file es for language es_PE 
+2023-06-09 03:15:22,576 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_editor\i18n\es.po 
+2023-06-09 03:15:22,649 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_editor: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:22,655 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_editor\i18n\es_PE.po 
+2023-06-09 03:15:22,702 22868 INFO ServidorPrueba odoo.modules.loading: Module web_editor loaded in 0.68s, 263 queries 
+2023-06-09 03:15:22,702 22868 INFO ServidorPrueba odoo.modules.loading: Loading module web_kanban_gauge (6/7) 
+2023-06-09 03:15:22,760 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_kanban_gauge: loading base translation file es for language es_PE 
+2023-06-09 03:15:22,767 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_kanban_gauge\i18n\es.po 
+2023-06-09 03:15:22,774 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_kanban_gauge: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:22,779 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_kanban_gauge\i18n\es_PE.po 
+2023-06-09 03:15:22,805 22868 INFO ServidorPrueba odoo.modules.loading: Module web_kanban_gauge loaded in 0.10s, 36 queries 
+2023-06-09 03:15:22,805 22868 INFO ServidorPrueba odoo.modules.loading: Loading module web_tour (7/7) 
+2023-06-09 03:15:22,878 22868 INFO ServidorPrueba odoo.modules.registry: module web_tour: creating or updating database tables 
+2023-06-09 03:15:22,925 22868 INFO ServidorPrueba odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2023-06-09 03:15:22,941 22868 INFO ServidorPrueba odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2023-06-09 03:15:22,956 22868 INFO ServidorPrueba odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2023-06-09 03:15:22,981 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_tour: loading base translation file es for language es_PE 
+2023-06-09 03:15:22,987 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_tour\i18n\es.po 
+2023-06-09 03:15:23,003 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_tour: no translation for language es_PE 
+2023-06-09 03:15:23,016 22868 INFO ServidorPrueba odoo.modules.loading: Module web_tour loaded in 0.21s, 124 queries 
+2023-06-09 03:15:23,016 22868 INFO ServidorPrueba odoo.modules.loading: 7 modules loaded in 3.60s, 2465 queries (+0 extra) 
+2023-06-09 03:15:23,249 22868 INFO ServidorPrueba odoo.modules.loading: Modules loaded. 
+2023-06-09 03:15:23,251 22868 INFO ServidorPrueba odoo.modules.registry: Registry loaded in 14.033s 
+2023-06-09 03:15:23,255 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base: loading base translation file es for language es_PE 
+2023-06-09 03:15:23,255 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base\i18n\es.po 
+2023-06-09 03:15:23,801 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:23,802 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base\i18n\es_PE.po 
+2023-06-09 03:15:24,172 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web: loading base translation file es for language es_PE 
+2023-06-09 03:15:24,173 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web\i18n\es.po 
+2023-06-09 03:15:24,248 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:24,248 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web\i18n\es_PE.po 
+2023-06-09 03:15:24,296 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp: loading base translation file es for language es_PE 
+2023-06-09 03:15:24,296 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\auth_totp\i18n\es.po 
+2023-06-09 03:15:24,310 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp: no translation for language es_PE 
+2023-06-09 03:15:24,311 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_import: loading base translation file es for language es_PE 
+2023-06-09 03:15:24,311 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_import\i18n\es.po 
+2023-06-09 03:15:24,339 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_import: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:24,340 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_import\i18n\es_PE.po 
+2023-06-09 03:15:24,364 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_editor: loading base translation file es for language es_PE 
+2023-06-09 03:15:24,365 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_editor\i18n\es.po 
+2023-06-09 03:15:24,413 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_editor: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:24,414 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_editor\i18n\es_PE.po 
+2023-06-09 03:15:24,446 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_kanban_gauge: loading base translation file es for language es_PE 
+2023-06-09 03:15:24,447 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_kanban_gauge\i18n\es.po 
+2023-06-09 03:15:24,453 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_kanban_gauge: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:24,453 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_kanban_gauge\i18n\es_PE.po 
+2023-06-09 03:15:24,460 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_tour: loading base translation file es for language es_PE 
+2023-06-09 03:15:24,461 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_tour\i18n\es.po 
+2023-06-09 03:15:24,471 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_tour: no translation for language es_PE 
+2023-06-09 03:15:24,730 22868 INFO ServidorPrueba odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-06-09 03:15:24,783 22868 INFO ServidorPrueba odoo.addons.base.models.res_users: Login successful for db:ServidorPrueba login:admin from 127.0.0.1 
+2023-06-09 03:15:24,829 22868 INFO ServidorPrueba odoo.modules.registry: Registry changed, signaling through the database 
+2023-06-09 03:15:24,830 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:24] "POST /web/database/create HTTP/1.1" 303 - 16860 8.867 8.659
+2023-06-09 03:15:24,903 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:24] "GET /web/database/selector?debug=0 HTTP/1.1" 200 - 5 0.014 0.234
+2023-06-09 03:15:26,770 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:26] "GET /web/database/selector?debug=0 HTTP/1.1" 200 - 4 0.005 0.081
+2023-06-09 03:15:28,525 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:28] "GET /web?db=ServidorPrueba HTTP/1.1" 303 - 1 0.001 0.003
+2023-06-09 03:15:36,113 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:36] "GET /web/login HTTP/1.1" 200 - 101 0.043 7.232
+2023-06-09 03:15:36,141 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:36] "GET /web/assets/13-d94f9ef/web.assets_common.min.css HTTP/1.1" 200 - 5 0.001 0.011
+2023-06-09 03:15:36,454 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:36] "GET /web/assets/14-025445e/web.assets_frontend.min.css HTTP/1.1" 200 - 3 0.001 0.012
+2023-06-09 03:15:36,476 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:36] "GET /web/assets/15-6827354/web.assets_common_minimal.min.js HTTP/1.1" 200 - 3 0.002 0.019
+2023-06-09 03:15:36,793 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:36] "GET /web/assets/16-0e7d986/web.assets_frontend_minimal.min.js HTTP/1.1" 200 - 3 0.001 0.025
+2023-06-09 03:15:36,794 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:36] "GET /web/binary/company_logo HTTP/1.1" 200 - 2 0.007 0.004
+2023-06-09 03:15:37,408 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:37] "GET /web/assets/17-ad7ee85/web.assets_common_lazy.min.js HTTP/1.1" 200 - 3 0.012 0.271
+2023-06-09 03:15:37,539 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:37] "GET /web/assets/18-b2a261d/web.assets_frontend_lazy.min.js HTTP/1.1" 200 - 3 0.000 0.065
+2023-06-09 03:15:37,911 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:37] "GET /web/webclient/translations/1686280537568 HTTP/1.1" 200 - 3 0.027 0.010
+2023-06-09 03:15:38,268 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:38] "GET /web/webclient/qweb/1686280537921?bundle=web.assets_frontend HTTP/1.1" 200 - 10 0.009 0.123
+2023-06-09 03:15:38,279 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:38] "GET /web/webclient/translations/1686280538273 HTTP/1.1" 200 - 3 0.004 0.001
+2023-06-09 03:15:41,034 22868 INFO ServidorPrueba odoo.addons.base.models.res_users: Login successful for db:ServidorPrueba login:admin from 127.0.0.1 
+2023-06-09 03:15:41,040 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:41] "POST /web/login HTTP/1.1" 303 - 26 0.013 0.082
+2023-06-09 03:15:50,587 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:50] "GET /web HTTP/1.1" 200 - 171 0.100 9.279
+2023-06-09 03:15:50,618 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:50] "GET /web/assets/19-9c70854/web.assets_backend.min.css HTTP/1.1" 200 - 2 0.000 0.019
+2023-06-09 03:15:51,056 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:51] "GET /web/webclient/load_menus/a6bdee49fa02786b4265d69ba2f77c527e413897f2b9429e9ab702ba24b1fb8c HTTP/1.1" 200 - 1 0.002 0.130
+2023-06-09 03:15:51,072 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:51] "GET /web/assets/22-ad199e2/web.assets_backend_prod_only.min.js HTTP/1.1" 200 - 2 0.005 0.125
+2023-06-09 03:15:51,116 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:51] "GET /web/webclient/qweb/214b4039b61b40e7a5d82d8de8acdbc869aa300e1f465f67d2efc4bacf236963?bundle=web.assets_qweb HTTP/1.1" 200 - 2 0.005 0.182
+2023-06-09 03:15:51,205 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:51] "GET /web/assets/20-d94f9ef/web.assets_common.min.js HTTP/1.1" 200 - 2 0.001 0.297
+2023-06-09 03:15:51,340 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:51] "GET /web/assets/21-9c70854/web.assets_backend.min.js HTTP/1.1" 200 - 2 0.004 0.401
+2023-06-09 03:15:51,877 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:51] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 7 0.009 0.018
+2023-06-09 03:15:51,936 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:51] "POST /web/action/load HTTP/1.1" 200 - 28 0.068 0.021
+2023-06-09 03:15:52,153 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:52] "GET /web/image/res.company/1/favicon HTTP/1.1" 200 - 11 0.029 0.012
+2023-06-09 03:15:52,279 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:52] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 58 0.043 0.030
+2023-06-09 03:15:52,317 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:52] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 42 0.017 0.006
+2023-06-09 03:15:52,668 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:52] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.019 0.009
+2023-06-09 03:15:52,894 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:15:52] "GET /web/image/res.company/1/favicon HTTP/1.1" 200 - 4 0.007 0.006
+2023-06-09 03:15:57,059 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Ventas'] to user admin #2 via 127.0.0.1 
+2023-06-09 03:15:57,060 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2023-06-09 03:15:57,066 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Ventas'] to user admin #2 via 127.0.0.1 
+2023-06-09 03:15:57,251 22868 INFO ServidorPrueba odoo.modules.loading: loading 1 modules... 
+2023-06-09 03:15:57,258 22868 INFO ServidorPrueba odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2023-06-09 03:15:57,276 22868 INFO ServidorPrueba odoo.modules.loading: updating modules list 
+2023-06-09 03:15:57,276 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2023-06-09 03:15:58,025 22868 INFO ServidorPrueba odoo.modules.loading: loading 7 modules... 
+2023-06-09 03:15:58,031 22868 INFO ServidorPrueba odoo.modules.loading: 7 modules loaded in 0.01s, 0 queries (+0 extra) 
+2023-06-09 03:15:58,050 22868 INFO ServidorPrueba odoo.modules.loading: loading 40 modules... 
+2023-06-09 03:15:58,050 22868 INFO ServidorPrueba odoo.modules.loading: Loading module uom (2/40) 
+2023-06-09 03:15:58,122 22868 INFO ServidorPrueba odoo.modules.registry: module uom: creating or updating database tables 
+2023-06-09 03:15:58,233 22868 INFO ServidorPrueba odoo.modules.loading: loading uom/data/uom_data.xml 
+2023-06-09 03:15:58,288 22868 INFO ServidorPrueba odoo.modules.loading: loading uom/security/uom_security.xml 
+2023-06-09 03:15:58,322 22868 INFO ServidorPrueba odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2023-06-09 03:15:58,341 22868 INFO ServidorPrueba odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2023-06-09 03:15:58,380 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module uom: loading base translation file es for language es_PE 
+2023-06-09 03:15:58,385 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\uom\i18n\es.po 
+2023-06-09 03:15:58,420 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module uom: no translation for language es_PE 
+2023-06-09 03:15:58,432 22868 INFO ServidorPrueba odoo.modules.loading: Module uom loaded in 0.38s, 288 queries 
+2023-06-09 03:15:58,432 22868 INFO ServidorPrueba odoo.modules.loading: Loading module base_setup (6/40) 
+2023-06-09 03:15:58,520 22868 INFO ServidorPrueba odoo.modules.registry: module base_setup: creating or updating database tables 
+2023-06-09 03:15:58,582 22868 INFO ServidorPrueba odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2023-06-09 03:15:58,594 22868 INFO ServidorPrueba odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2023-06-09 03:15:58,635 22868 INFO ServidorPrueba odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2023-06-09 03:15:58,651 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_setup: loading base translation file es for language es_PE 
+2023-06-09 03:15:58,657 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_setup\i18n\es.po 
+2023-06-09 03:15:58,689 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_setup: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:58,695 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_setup\i18n\es_PE.po 
+2023-06-09 03:15:58,721 22868 INFO ServidorPrueba odoo.modules.loading: Module base_setup loaded in 0.29s, 187 queries 
+2023-06-09 03:15:58,721 22868 INFO ServidorPrueba odoo.modules.loading: Loading module bus (7/40) 
+2023-06-09 03:15:58,765 22868 INFO ServidorPrueba odoo.modules.registry: module bus: creating or updating database tables 
+2023-06-09 03:15:58,860 22868 INFO ServidorPrueba odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2023-06-09 03:15:58,878 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module bus: loading base translation file es for language es_PE 
+2023-06-09 03:15:58,884 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\bus\i18n\es.po 
+2023-06-09 03:15:58,902 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module bus: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:15:58,908 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\bus\i18n\es_PE.po 
+2023-06-09 03:15:58,927 22868 INFO ServidorPrueba odoo.modules.loading: Module bus loaded in 0.21s, 121 queries 
+2023-06-09 03:15:58,927 22868 INFO ServidorPrueba odoo.modules.loading: Loading module http_routing (8/40) 
+2023-06-09 03:15:58,969 22868 INFO ServidorPrueba odoo.modules.registry: module http_routing: creating or updating database tables 
+2023-06-09 03:15:58,992 22868 INFO ServidorPrueba odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2023-06-09 03:15:59,042 22868 INFO ServidorPrueba odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2023-06-09 03:15:59,062 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module http_routing: loading base translation file es for language es_PE 
+2023-06-09 03:15:59,068 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\http_routing\i18n\es.po 
+2023-06-09 03:15:59,084 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module http_routing: no translation for language es_PE 
+2023-06-09 03:15:59,094 22868 INFO ServidorPrueba odoo.modules.loading: Module http_routing loaded in 0.17s, 112 queries 
+2023-06-09 03:15:59,094 22868 INFO ServidorPrueba odoo.modules.loading: Loading module resource (9/40) 
+2023-06-09 03:15:59,663 22868 INFO ServidorPrueba odoo.modules.registry: module resource: creating or updating database tables 
+2023-06-09 03:15:59,955 22868 INFO ServidorPrueba odoo.modules.loading: loading resource/data/resource_data.xml 
+2023-06-09 03:16:00,002 22868 INFO ServidorPrueba odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2023-06-09 03:16:00,027 22868 INFO ServidorPrueba odoo.modules.loading: loading resource/security/resource_security.xml 
+2023-06-09 03:16:00,062 22868 INFO ServidorPrueba odoo.modules.loading: loading resource/views/resource_views.xml 
+2023-06-09 03:16:00,161 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module resource: loading base translation file es for language es_PE 
+2023-06-09 03:16:00,167 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\resource\i18n\es.po 
+2023-06-09 03:16:00,210 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module resource: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:00,216 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\resource\i18n\es_PE.po 
+2023-06-09 03:16:00,261 22868 INFO ServidorPrueba odoo.modules.loading: Module resource loaded in 1.17s, 540 queries 
+2023-06-09 03:16:00,261 22868 INFO ServidorPrueba odoo.modules.loading: Loading module utm (10/40) 
+2023-06-09 03:16:00,348 22868 INFO ServidorPrueba odoo.modules.registry: module utm: creating or updating database tables 
+2023-06-09 03:16:00,526 22868 INFO ServidorPrueba odoo.modules.loading: loading utm/data/utm_data.xml 
+2023-06-09 03:16:00,567 22868 INFO ServidorPrueba odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2023-06-09 03:16:00,612 22868 INFO ServidorPrueba odoo.modules.loading: loading utm/views/utm_views.xml 
+2023-06-09 03:16:00,677 22868 INFO ServidorPrueba odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2023-06-09 03:16:00,705 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module utm: loading base translation file es for language es_PE 
+2023-06-09 03:16:00,711 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\utm\i18n\es.po 
+2023-06-09 03:16:00,745 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module utm: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:00,751 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\utm\i18n\es_PE.po 
+2023-06-09 03:16:00,785 22868 INFO ServidorPrueba odoo.modules.loading: Module utm loaded in 0.52s, 403 queries 
+2023-06-09 03:16:00,786 22868 INFO ServidorPrueba odoo.modules.loading: Loading module iap (14/40) 
+2023-06-09 03:16:00,885 22868 INFO ServidorPrueba odoo.modules.registry: module iap: creating or updating database tables 
+2023-06-09 03:16:00,963 22868 INFO ServidorPrueba odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2023-06-09 03:16:00,981 22868 INFO ServidorPrueba odoo.modules.loading: loading iap/security/ir_rule.xml 
+2023-06-09 03:16:00,996 22868 INFO ServidorPrueba odoo.modules.loading: loading iap/views/iap_views.xml 
+2023-06-09 03:16:01,019 22868 INFO ServidorPrueba odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2023-06-09 03:16:01,046 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module iap: loading base translation file es for language es_PE 
+2023-06-09 03:16:01,054 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\iap\i18n\es.po 
+2023-06-09 03:16:01,076 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module iap: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:01,082 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\iap\i18n\es_PE.po 
+2023-06-09 03:16:01,105 22868 INFO ServidorPrueba odoo.modules.loading: Module iap loaded in 0.32s, 174 queries 
+2023-06-09 03:16:01,105 22868 INFO ServidorPrueba odoo.modules.loading: Loading module mail (15/40) 
+2023-06-09 03:16:01,832 22868 INFO ServidorPrueba odoo.modules.registry: module mail: creating or updating database tables 
+2023-06-09 03:16:02,938 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.email_normalized 
+2023-06-09 03:16:03,728 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/data/mail_groups.xml 
+2023-06-09 03:16:03,761 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2023-06-09 03:16:03,773 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2023-06-09 03:16:03,793 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/wizard/mail_resend_cancel_views.xml 
+2023-06-09 03:16:03,807 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2023-06-09 03:16:03,822 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2023-06-09 03:16:03,838 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2023-06-09 03:16:03,850 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2023-06-09 03:16:03,867 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_tracking_views.xml 
+2023-06-09 03:16:03,884 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2023-06-09 03:16:03,901 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2023-06-09 03:16:03,934 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2023-06-09 03:16:03,957 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2023-06-09 03:16:03,974 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2023-06-09 03:16:03,992 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_channel_partner_views.xml 
+2023-06-09 03:16:04,008 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_channel_rtc_session_views.xml 
+2023-06-09 03:16:04,029 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_channel_views.xml 
+2023-06-09 03:16:04,056 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2023-06-09 03:16:04,074 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2023-06-09 03:16:04,122 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2023-06-09 03:16:04,150 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2023-06-09 03:16:04,183 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2023-06-09 03:16:04,197 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/data/mail_templates.xml 
+2023-06-09 03:16:04,239 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/data/mail_channel_data.xml 
+2023-06-09 03:16:04,272 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2023-06-09 03:16:04,294 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2023-06-09 03:16:04,324 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/security/mail_security.xml 
+2023-06-09 03:16:04,422 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2023-06-09 03:16:04,500 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2023-06-09 03:16:04,523 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2023-06-09 03:16:04,544 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2023-06-09 03:16:04,557 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2023-06-09 03:16:04,569 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/res_users_views.xml 
+2023-06-09 03:16:04,591 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2023-06-09 03:16:04,608 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2023-06-09 03:16:04,631 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2023-06-09 03:16:04,647 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2023-06-09 03:16:04,674 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2023-06-09 03:16:04,733 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2023-06-09 03:16:04,754 22868 INFO ServidorPrueba odoo.modules.loading: loading mail/views/mail_menus.xml 
+2023-06-09 03:16:04,853 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module mail: loading base translation file es for language es_PE 
+2023-06-09 03:16:04,863 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\mail\i18n\es.po 
+2023-06-09 03:16:05,098 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module mail: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:05,107 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\mail\i18n\es_PE.po 
+2023-06-09 03:16:05,248 22868 INFO ServidorPrueba odoo.modules.loading: Module mail loaded in 4.14s, 3337 queries 
+2023-06-09 03:16:05,248 22868 INFO ServidorPrueba odoo.modules.loading: Loading module web_unsplash (16/40) 
+2023-06-09 03:16:05,385 22868 INFO ServidorPrueba odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2023-06-09 03:16:05,517 22868 INFO ServidorPrueba odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2023-06-09 03:16:05,557 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_unsplash: loading base translation file es for language es_PE 
+2023-06-09 03:16:05,563 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\web_unsplash\i18n\es.po 
+2023-06-09 03:16:05,584 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module web_unsplash: no translation for language es_PE 
+2023-06-09 03:16:05,593 22868 INFO ServidorPrueba odoo.modules.loading: Module web_unsplash loaded in 0.34s, 96 queries 
+2023-06-09 03:16:05,593 22868 INFO ServidorPrueba odoo.modules.loading: Loading module analytic (17/40) 
+2023-06-09 03:16:05,699 22868 INFO ServidorPrueba odoo.modules.registry: module analytic: creating or updating database tables 
+2023-06-09 03:16:05,956 22868 INFO ServidorPrueba odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2023-06-09 03:16:05,992 22868 INFO ServidorPrueba odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2023-06-09 03:16:06,013 22868 INFO ServidorPrueba odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2023-06-09 03:16:06,117 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module analytic: loading base translation file es for language es_PE 
+2023-06-09 03:16:06,125 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\analytic\i18n\es.po 
+2023-06-09 03:16:06,160 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module analytic: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:06,165 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\analytic\i18n\es_PE.po 
+2023-06-09 03:16:06,200 22868 INFO ServidorPrueba odoo.modules.loading: Module analytic loaded in 0.61s, 428 queries 
+2023-06-09 03:16:06,200 22868 INFO ServidorPrueba odoo.modules.loading: Loading module auth_signup (18/40) 
+2023-06-09 03:16:06,337 22868 INFO ServidorPrueba odoo.modules.registry: module auth_signup: creating or updating database tables 
+2023-06-09 03:16:06,413 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2023-06-09 03:16:06,427 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2023-06-09 03:16:06,441 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2023-06-09 03:16:06,462 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2023-06-09 03:16:06,481 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2023-06-09 03:16:06,505 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2023-06-09 03:16:06,533 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_signup: loading base translation file es for language es_PE 
+2023-06-09 03:16:06,540 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\auth_signup\i18n\es.po 
+2023-06-09 03:16:06,575 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_signup: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:06,581 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\auth_signup\i18n\es_PE.po 
+2023-06-09 03:16:06,611 22868 INFO ServidorPrueba odoo.modules.loading: Module auth_signup loaded in 0.41s, 208 queries 
+2023-06-09 03:16:06,611 22868 INFO ServidorPrueba odoo.modules.loading: Loading module auth_totp_mail (19/40) 
+2023-06-09 03:16:06,707 22868 INFO ServidorPrueba odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2023-06-09 03:16:06,733 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2023-06-09 03:16:06,768 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2023-06-09 03:16:06,779 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2023-06-09 03:16:06,808 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp_mail: loading base translation file es for language es_PE 
+2023-06-09 03:16:06,814 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\auth_totp_mail\i18n\es.po 
+2023-06-09 03:16:06,829 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp_mail: no translation for language es_PE 
+2023-06-09 03:16:06,839 22868 INFO ServidorPrueba odoo.modules.loading: Module auth_totp_mail loaded in 0.23s, 102 queries 
+2023-06-09 03:16:06,839 22868 INFO ServidorPrueba odoo.modules.loading: Loading module fetchmail (20/40) 
+2023-06-09 03:16:06,980 22868 INFO ServidorPrueba odoo.modules.registry: module fetchmail: creating or updating database tables 
+2023-06-09 03:16:07,076 22868 INFO ServidorPrueba odoo.modules.loading: loading fetchmail/data/fetchmail_data.xml 
+2023-06-09 03:16:07,090 22868 INFO ServidorPrueba odoo.modules.loading: loading fetchmail/security/ir.model.access.csv 
+2023-06-09 03:16:07,106 22868 INFO ServidorPrueba odoo.modules.loading: loading fetchmail/views/fetchmail_views.xml 
+2023-06-09 03:16:07,136 22868 INFO ServidorPrueba odoo.modules.loading: loading fetchmail/views/mail_mail_views.xml 
+2023-06-09 03:16:07,153 22868 INFO ServidorPrueba odoo.modules.loading: loading fetchmail/views/res_config_settings_views.xml 
+2023-06-09 03:16:07,178 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module fetchmail: loading base translation file es for language es_PE 
+2023-06-09 03:16:07,185 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\fetchmail\i18n\es.po 
+2023-06-09 03:16:07,210 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module fetchmail: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:07,218 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\fetchmail\i18n\es_PE.po 
+2023-06-09 03:16:07,244 22868 INFO ServidorPrueba odoo.modules.loading: Module fetchmail loaded in 0.40s, 208 queries 
+2023-06-09 03:16:07,245 22868 INFO ServidorPrueba odoo.modules.loading: Loading module iap_mail (21/40) 
+2023-06-09 03:16:07,338 22868 INFO ServidorPrueba odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2023-06-09 03:16:07,373 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module iap_mail: loading base translation file es for language es_PE 
+2023-06-09 03:16:07,379 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\iap_mail\i18n\es.po 
+2023-06-09 03:16:07,394 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module iap_mail: no translation for language es_PE 
+2023-06-09 03:16:07,402 22868 INFO ServidorPrueba odoo.modules.loading: Module iap_mail loaded in 0.16s, 36 queries 
+2023-06-09 03:16:07,402 22868 INFO ServidorPrueba odoo.modules.loading: Loading module mail_bot (22/40) 
+2023-06-09 03:16:07,530 22868 INFO ServidorPrueba odoo.modules.registry: module mail_bot: creating or updating database tables 
+2023-06-09 03:16:07,666 22868 INFO ServidorPrueba odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2023-06-09 03:16:07,692 22868 INFO ServidorPrueba odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2023-06-09 03:16:07,705 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module mail_bot: loading base translation file es for language es_PE 
+2023-06-09 03:16:07,711 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\mail_bot\i18n\es.po 
+2023-06-09 03:16:07,732 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module mail_bot: no translation for language es_PE 
+2023-06-09 03:16:07,743 22868 INFO ServidorPrueba odoo.modules.loading: Module mail_bot loaded in 0.34s, 146 queries 
+2023-06-09 03:16:07,743 22868 INFO ServidorPrueba odoo.modules.loading: Loading module phone_validation (23/40) 
+2023-06-09 03:16:07,910 22868 INFO ServidorPrueba odoo.modules.registry: module phone_validation: creating or updating database tables 
+2023-06-09 03:16:08,039 22868 INFO ServidorPrueba odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2023-06-09 03:16:08,054 22868 INFO ServidorPrueba odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2023-06-09 03:16:08,086 22868 INFO ServidorPrueba odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2023-06-09 03:16:08,101 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module phone_validation: loading base translation file es for language es_PE 
+2023-06-09 03:16:08,107 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\phone_validation\i18n\es.po 
+2023-06-09 03:16:08,134 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module phone_validation: no translation for language es_PE 
+2023-06-09 03:16:08,147 22868 INFO ServidorPrueba odoo.modules.loading: Module phone_validation loaded in 0.40s, 188 queries 
+2023-06-09 03:16:08,147 22868 INFO ServidorPrueba odoo.modules.loading: Loading module product (24/40) 
+2023-06-09 03:16:09,009 22868 INFO ServidorPrueba odoo.modules.registry: module product: creating or updating database tables 
+2023-06-09 03:16:09,762 22868 INFO ServidorPrueba odoo.modules.loading: loading product/data/product_data.xml 
+2023-06-09 03:16:09,794 22868 INFO ServidorPrueba odoo.modules.loading: loading product/security/product_security.xml 
+2023-06-09 03:16:09,842 22868 INFO ServidorPrueba odoo.modules.loading: loading product/security/ir.model.access.csv 
+2023-06-09 03:16:09,880 22868 INFO ServidorPrueba odoo.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2023-06-09 03:16:09,892 22868 INFO ServidorPrueba odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2023-06-09 03:16:09,923 22868 INFO ServidorPrueba odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2023-06-09 03:16:09,956 22868 INFO ServidorPrueba odoo.modules.loading: loading product/views/product_views.xml 
+2023-06-09 03:16:10,087 22868 INFO ServidorPrueba odoo.modules.loading: loading product/views/product_template_views.xml 
+2023-06-09 03:16:10,124 22868 INFO ServidorPrueba odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2023-06-09 03:16:10,185 22868 INFO ServidorPrueba odoo.modules.loading: loading product/views/res_partner_views.xml 
+2023-06-09 03:16:10,201 22868 INFO ServidorPrueba odoo.modules.loading: loading product/report/product_reports.xml 
+2023-06-09 03:16:10,225 22868 INFO ServidorPrueba odoo.modules.loading: loading product/report/product_product_templates.xml 
+2023-06-09 03:16:10,253 22868 INFO ServidorPrueba odoo.modules.loading: loading product/report/product_template_templates.xml 
+2023-06-09 03:16:10,267 22868 INFO ServidorPrueba odoo.modules.loading: loading product/report/product_packaging.xml 
+2023-06-09 03:16:10,280 22868 INFO ServidorPrueba odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2023-06-09 03:16:10,299 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module product: loading base translation file es for language es_PE 
+2023-06-09 03:16:10,306 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\product\i18n\es.po 
+2023-06-09 03:16:10,420 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module product: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:10,427 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\product\i18n\es_PE.po 
+2023-06-09 03:16:10,516 22868 INFO ServidorPrueba odoo.modules.loading: Module product loaded in 2.37s, 1412 queries 
+2023-06-09 03:16:10,516 22868 INFO ServidorPrueba odoo.modules.loading: Loading module sales_team (25/40) 
+2023-06-09 03:16:10,671 22868 INFO ServidorPrueba odoo.modules.registry: module sales_team: creating or updating database tables 
+2023-06-09 03:16:10,751 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.users.sale_team_id 
+2023-06-09 03:16:10,934 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/security/sales_team_security.xml 
+2023-06-09 03:16:11,010 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/security/ir.model.access.csv 
+2023-06-09 03:16:11,037 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/data/crm_team_data.xml 
+2023-06-09 03:16:11,097 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/views/crm_tag_views.xml 
+2023-06-09 03:16:11,116 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/views/crm_team_views.xml 
+2023-06-09 03:16:11,154 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/views/crm_team_member_views.xml 
+2023-06-09 03:16:11,194 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/views/mail_activity_views.xml 
+2023-06-09 03:16:11,204 22868 INFO ServidorPrueba odoo.modules.loading: loading sales_team/views/res_partner_views.xml 
+2023-06-09 03:16:11,224 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sales_team: loading base translation file es for language es_PE 
+2023-06-09 03:16:11,231 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\sales_team\i18n\es.po 
+2023-06-09 03:16:11,269 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sales_team: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:11,275 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\sales_team\i18n\es_PE.po 
+2023-06-09 03:16:11,422 22868 INFO ServidorPrueba odoo.modules.loading: Module sales_team loaded in 0.91s, 544 queries 
+2023-06-09 03:16:11,422 22868 INFO ServidorPrueba odoo.modules.loading: Loading module partner_autocomplete (26/40) 
+2023-06-09 03:16:11,581 22868 INFO ServidorPrueba odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2023-06-09 03:16:11,692 22868 INFO ServidorPrueba odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2023-06-09 03:16:11,708 22868 INFO ServidorPrueba odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2023-06-09 03:16:11,733 22868 INFO ServidorPrueba odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2023-06-09 03:16:11,746 22868 INFO ServidorPrueba odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2023-06-09 03:16:11,765 22868 INFO ServidorPrueba odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2023-06-09 03:16:11,781 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module partner_autocomplete: loading base translation file es for language es_PE 
+2023-06-09 03:16:11,787 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\partner_autocomplete\i18n\es.po 
+2023-06-09 03:16:11,805 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module partner_autocomplete: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:11,811 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\partner_autocomplete\i18n\es_PE.po 
+2023-06-09 03:16:11,832 22868 INFO ServidorPrueba odoo.modules.loading: Module partner_autocomplete loaded in 0.41s, 205 queries 
+2023-06-09 03:16:11,832 22868 INFO ServidorPrueba odoo.modules.loading: Loading module portal (27/40) 
+2023-06-09 03:16:12,075 22868 INFO ServidorPrueba odoo.modules.registry: module portal: creating or updating database tables 
+2023-06-09 03:16:12,331 22868 INFO ServidorPrueba odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2023-06-09 03:16:12,346 22868 INFO ServidorPrueba odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2023-06-09 03:16:12,358 22868 INFO ServidorPrueba odoo.modules.loading: loading portal/data/mail_templates.xml 
+2023-06-09 03:16:12,371 22868 INFO ServidorPrueba odoo.modules.loading: loading portal/views/portal_templates.xml 
+2023-06-09 03:16:12,468 22868 INFO ServidorPrueba odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2023-06-09 03:16:12,489 22868 INFO ServidorPrueba odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2023-06-09 03:16:12,505 22868 INFO ServidorPrueba odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2023-06-09 03:16:12,527 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module portal: loading base translation file es for language es_PE 
+2023-06-09 03:16:12,534 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\portal\i18n\es.po 
+2023-06-09 03:16:12,582 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module portal: no translation for language es_PE 
+2023-06-09 03:16:12,599 22868 INFO ServidorPrueba odoo.modules.loading: Module portal loaded in 0.77s, 467 queries 
+2023-06-09 03:16:12,599 22868 INFO ServidorPrueba odoo.modules.loading: Loading module sms (28/40) 
+2023-06-09 03:16:12,860 22868 INFO ServidorPrueba odoo.modules.registry: module sms: creating or updating database tables 
+2023-06-09 03:16:13,107 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.phone_sanitized 
+2023-06-09 03:16:13,308 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2023-06-09 03:16:13,323 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/wizard/sms_cancel_views.xml 
+2023-06-09 03:16:13,342 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2023-06-09 03:16:13,358 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2023-06-09 03:16:13,373 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2023-06-09 03:16:13,389 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/views/ir_actions_views.xml 
+2023-06-09 03:16:13,404 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2023-06-09 03:16:13,424 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2023-06-09 03:16:13,443 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2023-06-09 03:16:13,480 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2023-06-09 03:16:13,515 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2023-06-09 03:16:13,549 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2023-06-09 03:16:13,580 22868 INFO ServidorPrueba odoo.modules.loading: loading sms/security/sms_security.xml 
+2023-06-09 03:16:13,599 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sms: loading base translation file es for language es_PE 
+2023-06-09 03:16:13,606 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\sms\i18n\es.po 
+2023-06-09 03:16:13,750 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sms: no translation for language es_PE 
+2023-06-09 03:16:13,774 22868 INFO ServidorPrueba odoo.modules.loading: Module sms loaded in 1.18s, 631 queries 
+2023-06-09 03:16:13,774 22868 INFO ServidorPrueba odoo.modules.loading: Loading module snailmail (29/40) 
+2023-06-09 03:16:14,018 22868 INFO ServidorPrueba odoo.modules.registry: module snailmail: creating or updating database tables 
+2023-06-09 03:16:14,293 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2023-06-09 03:16:14,312 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2023-06-09 03:16:14,332 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2023-06-09 03:16:14,358 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/wizard/snailmail_confirm_views.xml 
+2023-06-09 03:16:14,370 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/wizard/snailmail_letter_cancel_views.xml 
+2023-06-09 03:16:14,387 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2023-06-09 03:16:14,406 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2023-06-09 03:16:14,453 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2023-06-09 03:16:14,493 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module snailmail: loading base translation file es for language es_PE 
+2023-06-09 03:16:14,505 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\snailmail\i18n\es.po 
+2023-06-09 03:16:14,546 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module snailmail: no translation for language es_PE 
+2023-06-09 03:16:14,562 22868 INFO ServidorPrueba odoo.modules.loading: Module snailmail loaded in 0.79s, 384 queries 
+2023-06-09 03:16:14,562 22868 INFO ServidorPrueba odoo.modules.loading: Loading module auth_totp_portal (30/40) 
+2023-06-09 03:16:14,692 22868 INFO ServidorPrueba odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2023-06-09 03:16:14,724 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2023-06-09 03:16:14,773 22868 INFO ServidorPrueba odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2023-06-09 03:16:14,793 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp_portal: loading base translation file es for language es_PE 
+2023-06-09 03:16:14,800 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\auth_totp_portal\i18n\es.po 
+2023-06-09 03:16:14,816 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module auth_totp_portal: no translation for language es_PE 
+2023-06-09 03:16:14,825 22868 INFO ServidorPrueba odoo.modules.loading: Module auth_totp_portal loaded in 0.26s, 84 queries 
+2023-06-09 03:16:14,826 22868 INFO ServidorPrueba odoo.modules.loading: Loading module digest (31/40) 
+2023-06-09 03:16:15,019 22868 INFO ServidorPrueba odoo.modules.registry: module digest: creating or updating database tables 
+2023-06-09 03:16:15,189 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2023-06-09 03:16:15,207 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/data/digest_data.xml 
+2023-06-09 03:16:15,234 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2023-06-09 03:16:15,257 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2023-06-09 03:16:15,273 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2023-06-09 03:16:15,286 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/views/digest_views.xml 
+2023-06-09 03:16:15,335 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/views/digest_templates.xml 
+2023-06-09 03:16:15,346 22868 INFO ServidorPrueba odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2023-06-09 03:16:15,374 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module digest: loading base translation file es for language es_PE 
+2023-06-09 03:16:15,384 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\digest\i18n\es.po 
+2023-06-09 03:16:15,416 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module digest: no translation for language es_PE 
+2023-06-09 03:16:15,435 22868 INFO ServidorPrueba odoo.modules.loading: Module digest loaded in 0.61s, 316 queries 
+2023-06-09 03:16:15,435 22868 INFO ServidorPrueba odoo.modules.loading: Loading module account (32/40) 
+2023-06-09 03:16:16,555 22868 INFO ServidorPrueba odoo.modules.registry: module account: creating or updating database tables 
+2023-06-09 03:16:18,134 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.company.invoice_terms_html 
+2023-06-09 03:16:18,134 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.company.account_fiscal_country_id 
+2023-06-09 03:16:20,474 22868 INFO ServidorPrueba odoo.modules.loading: loading account/security/account_security.xml 
+2023-06-09 03:16:20,756 22868 INFO ServidorPrueba odoo.modules.loading: loading account/security/ir.model.access.csv 
+2023-06-09 03:16:20,910 22868 INFO ServidorPrueba odoo.modules.loading: loading account/data/data_account_type.xml 
+2023-06-09 03:16:20,948 22868 INFO ServidorPrueba odoo.modules.loading: loading account/data/account_data.xml 
+2023-06-09 03:16:21,031 22868 INFO ServidorPrueba odoo.modules.loading: loading account/data/digest_data.xml 
+2023-06-09 03:16:21,045 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_report.xml 
+2023-06-09 03:16:21,074 22868 INFO ServidorPrueba odoo.modules.loading: loading account/data/mail_template_data.xml 
+2023-06-09 03:16:21,093 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_payment_view.xml 
+2023-06-09 03:16:21,172 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2023-06-09 03:16:21,191 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2023-06-09 03:16:21,209 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2023-06-09 03:16:21,226 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2023-06-09 03:16:21,243 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2023-06-09 03:16:21,258 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_move_views.xml 
+2023-06-09 03:16:21,526 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2023-06-09 03:16:21,548 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/pos_box.xml 
+2023-06-09 03:16:21,560 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_account_type_views.xml 
+2023-06-09 03:16:21,582 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_account_views.xml 
+2023-06-09 03:16:21,617 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_group_views.xml 
+2023-06-09 03:16:21,637 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_journal_views.xml 
+2023-06-09 03:16:21,690 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2023-06-09 03:16:21,711 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2023-06-09 03:16:21,784 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2023-06-09 03:16:21,821 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_tax_views.xml 
+2023-06-09 03:16:21,879 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2023-06-09 03:16:21,892 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2023-06-09 03:16:21,930 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_chart_template_views.xml 
+2023-06-09 03:16:21,995 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2023-06-09 03:16:22,013 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/report_statement.xml 
+2023-06-09 03:16:22,028 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/terms_template.xml 
+2023-06-09 03:16:22,048 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2023-06-09 03:16:22,066 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/res_company_views.xml 
+2023-06-09 03:16:22,087 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/product_view.xml 
+2023-06-09 03:16:22,121 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_analytic_view.xml 
+2023-06-09 03:16:22,162 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/report_invoice.xml 
+2023-06-09 03:16:22,196 22868 INFO ServidorPrueba odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2023-06-09 03:16:22,252 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2023-06-09 03:16:22,275 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_report_common_view.xml 
+2023-06-09 03:16:22,288 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/report_journal.xml 
+2023-06-09 03:16:22,303 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/tax_adjustments.xml 
+2023-06-09 03:16:22,312 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/wizard_tax_adjustments_view.xml 
+2023-06-09 03:16:22,332 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/ir_module_views.xml 
+2023-06-09 03:16:22,347 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2023-06-09 03:16:22,396 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/partner_view.xml 
+2023-06-09 03:16:22,464 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2023-06-09 03:16:22,489 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2023-06-09 03:16:22,527 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2023-06-09 03:16:22,544 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_onboarding_templates.xml 
+2023-06-09 03:16:22,597 22868 INFO ServidorPrueba odoo.modules.loading: loading account/data/service_cron.xml 
+2023-06-09 03:16:22,611 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2023-06-09 03:16:22,636 22868 INFO ServidorPrueba odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2023-06-09 03:16:22,660 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/digest_views.xml 
+2023-06-09 03:16:22,675 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_invoice_send_views.xml 
+2023-06-09 03:16:22,695 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_tax_report_views.xml 
+2023-06-09 03:16:22,736 22868 INFO ServidorPrueba odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2023-06-09 03:16:22,749 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/res_currency.xml 
+2023-06-09 03:16:22,764 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_menuitem.xml 
+2023-06-09 03:16:23,006 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/account_analytic_default_view.xml 
+2023-06-09 03:16:23,043 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2023-06-09 03:16:23,060 22868 INFO ServidorPrueba odoo.modules.loading: loading account/wizard/accrued_orders.xml 
+2023-06-09 03:16:23,075 22868 INFO ServidorPrueba odoo.modules.loading: loading account/views/bill_preview_template.xml 
+2023-06-09 03:16:23,098 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account: loading base translation file es for language es_PE 
+2023-06-09 03:16:23,110 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\account\i18n\es.po 
+2023-06-09 03:16:23,751 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:23,766 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\account\i18n\es_PE.po 
+2023-06-09 03:16:23,982 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Peru - Accounting'] to user __system__ #1 via 127.0.0.1 
+2023-06-09 03:16:24,200 22868 INFO ServidorPrueba odoo.modules.loading: Module account loaded in 8.76s, 6620 queries 
+2023-06-09 03:16:24,201 22868 INFO ServidorPrueba odoo.modules.loading: Loading module account_edi (33/40) 
+2023-06-09 03:16:24,503 22868 INFO ServidorPrueba odoo.modules.registry: module account_edi: creating or updating database tables 
+2023-06-09 03:16:24,843 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi/security/ir.model.access.csv 
+2023-06-09 03:16:24,866 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi/views/account_edi_document_views.xml 
+2023-06-09 03:16:24,883 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi/views/account_move_views.xml 
+2023-06-09 03:16:24,948 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi/views/account_payment_views.xml 
+2023-06-09 03:16:24,972 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi/views/account_journal_views.xml 
+2023-06-09 03:16:24,988 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi/data/cron.xml 
+2023-06-09 03:16:25,013 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account_edi: loading base translation file es for language es_PE 
+2023-06-09 03:16:25,020 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\account_edi\i18n\es.po 
+2023-06-09 03:16:25,053 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account_edi: no translation for language es_PE 
+2023-06-09 03:16:25,068 22868 INFO ServidorPrueba odoo.modules.loading: Module account_edi loaded in 0.87s, 323 queries 
+2023-06-09 03:16:25,069 22868 INFO ServidorPrueba odoo.modules.loading: Loading module payment (34/40) 
+2023-06-09 03:16:25,636 22868 INFO ServidorPrueba odoo.modules.registry: module payment: creating or updating database tables 
+2023-06-09 03:16:26,253 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/data/payment_icon_data.xml 
+2023-06-09 03:16:26,544 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/data/payment_acquirer_data.xml 
+2023-06-09 03:16:26,874 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/data/payment_cron.xml 
+2023-06-09 03:16:26,888 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/payment_portal_templates.xml 
+2023-06-09 03:16:26,925 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/payment_templates.xml 
+2023-06-09 03:16:26,959 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/account_invoice_views.xml 
+2023-06-09 03:16:26,981 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/account_journal_views.xml 
+2023-06-09 03:16:27,003 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/account_payment_views.xml 
+2023-06-09 03:16:27,022 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/payment_acquirer_views.xml 
+2023-06-09 03:16:27,065 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/payment_icon_views.xml 
+2023-06-09 03:16:27,091 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/payment_transaction_views.xml 
+2023-06-09 03:16:27,130 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/payment_token_views.xml 
+2023-06-09 03:16:27,159 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2023-06-09 03:16:27,181 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2023-06-09 03:16:27,309 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/security/payment_security.xml 
+2023-06-09 03:16:27,352 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/wizards/account_payment_register_views.xml 
+2023-06-09 03:16:27,367 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/wizards/payment_acquirer_onboarding_templates.xml 
+2023-06-09 03:16:27,386 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2023-06-09 03:16:27,402 22868 INFO ServidorPrueba odoo.modules.loading: loading payment/wizards/payment_refund_wizard_views.xml 
+2023-06-09 03:16:27,418 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module payment: loading base translation file es for language es_PE 
+2023-06-09 03:16:27,425 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\payment\i18n\es.po 
+2023-06-09 03:16:27,511 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module payment: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:27,517 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\payment\i18n\es_PE.po 
+2023-06-09 03:16:27,583 22868 INFO ServidorPrueba odoo.modules.loading: Module payment loaded in 2.51s, 1105 queries 
+2023-06-09 03:16:27,583 22868 INFO ServidorPrueba odoo.modules.loading: Loading module snailmail_account (35/40) 
+2023-06-09 03:16:27,854 22868 INFO ServidorPrueba odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2023-06-09 03:16:28,090 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2023-06-09 03:16:28,123 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail_account/wizard/account_invoice_send_views.xml 
+2023-06-09 03:16:28,143 22868 INFO ServidorPrueba odoo.modules.loading: loading snailmail_account/security/ir.model.access.csv 
+2023-06-09 03:16:28,161 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module snailmail_account: loading base translation file es for language es_PE 
+2023-06-09 03:16:28,167 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\snailmail_account\i18n\es.po 
+2023-06-09 03:16:28,190 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module snailmail_account: no translation for language es_PE 
+2023-06-09 03:16:28,200 22868 INFO ServidorPrueba odoo.modules.loading: Module snailmail_account loaded in 0.62s, 133 queries 
+2023-06-09 03:16:28,200 22868 INFO ServidorPrueba odoo.modules.loading: Loading module account_edi_facturx (36/40) 
+2023-06-09 03:16:28,457 22868 INFO ServidorPrueba odoo.modules.registry: module account_edi_facturx: creating or updating database tables 
+2023-06-09 03:16:28,491 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi_facturx/data/account_edi_data.xml 
+2023-06-09 03:16:28,584 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi_facturx/data/facturx_templates.xml 
+2023-06-09 03:16:28,615 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account_edi_facturx: loading base translation file es for language es_PE 
+2023-06-09 03:16:28,621 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\account_edi_facturx\i18n\es.po 
+2023-06-09 03:16:28,641 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account_edi_facturx: no translation for language es_PE 
+2023-06-09 03:16:28,643 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Import/Export electronic invoices with UBL/CII'] to user __system__ #1 via 127.0.0.1 
+2023-06-09 03:16:28,698 22868 INFO ServidorPrueba odoo.modules.loading: Module account_edi_facturx loaded in 0.50s, 104 queries 
+2023-06-09 03:16:28,699 22868 INFO ServidorPrueba odoo.modules.loading: Loading module payment_transfer (37/40) 
+2023-06-09 03:16:28,962 22868 INFO ServidorPrueba odoo.modules.registry: module payment_transfer: creating or updating database tables 
+2023-06-09 03:16:29,085 22868 INFO ServidorPrueba odoo.modules.loading: loading payment_transfer/views/payment_views.xml 
+2023-06-09 03:16:29,103 22868 INFO ServidorPrueba odoo.modules.loading: loading payment_transfer/views/payment_transfer_templates.xml 
+2023-06-09 03:16:29,122 22868 INFO ServidorPrueba odoo.modules.loading: loading payment_transfer/data/payment_acquirer_data.xml 
+2023-06-09 03:16:29,153 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module payment_transfer: loading base translation file es for language es_PE 
+2023-06-09 03:16:29,159 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\payment_transfer\i18n\es.po 
+2023-06-09 03:16:29,176 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module payment_transfer: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:29,182 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\payment_transfer\i18n\es_PE.po 
+2023-06-09 03:16:29,207 22868 INFO ServidorPrueba odoo.modules.loading: Module payment_transfer loaded in 0.51s, 129 queries 
+2023-06-09 03:16:29,207 22868 INFO ServidorPrueba odoo.modules.loading: Loading module sale (38/40) 
+2023-06-09 03:16:29,912 22868 INFO ServidorPrueba odoo.modules.registry: module sale: creating or updating database tables 
+2023-06-09 03:16:30,788 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/security/sale_security.xml 
+2023-06-09 03:16:30,975 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/security/ir.model.access.csv 
+2023-06-09 03:16:31,051 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/report/sale_report.xml 
+2023-06-09 03:16:31,068 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/report/sale_report_views.xml 
+2023-06-09 03:16:31,099 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/report/sale_report_templates.xml 
+2023-06-09 03:16:31,122 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/report/invoice_report_templates.xml 
+2023-06-09 03:16:31,139 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/report/report_all_channels_sales_views.xml 
+2023-06-09 03:16:31,148 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/data/ir_sequence_data.xml 
+2023-06-09 03:16:31,161 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/data/mail_data_various.xml 
+2023-06-09 03:16:31,194 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/data/mail_template_data.xml 
+2023-06-09 03:16:31,211 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/data/mail_templates.xml 
+2023-06-09 03:16:31,228 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/data/sale_data.xml 
+2023-06-09 03:16:31,250 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/wizard/sale_make_invoice_advance_views.xml 
+2023-06-09 03:16:31,267 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/sale_views.xml 
+2023-06-09 03:16:31,616 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/crm_team_views.xml 
+2023-06-09 03:16:31,650 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/res_partner_views.xml 
+2023-06-09 03:16:31,703 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/mail_activity_views.xml 
+2023-06-09 03:16:31,717 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/variant_templates.xml 
+2023-06-09 03:16:31,732 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/sale_portal_templates.xml 
+2023-06-09 03:16:31,777 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/sale_onboarding_views.xml 
+2023-06-09 03:16:31,806 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/res_config_settings_views.xml 
+2023-06-09 03:16:31,853 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/payment_templates.xml 
+2023-06-09 03:16:31,872 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/payment_views.xml 
+2023-06-09 03:16:31,894 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/product_views.xml 
+2023-06-09 03:16:31,910 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/product_packaging_views.xml 
+2023-06-09 03:16:31,929 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/views/utm_campaign_views.xml 
+2023-06-09 03:16:31,949 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/wizard/sale_order_cancel_views.xml 
+2023-06-09 03:16:31,961 22868 INFO ServidorPrueba odoo.modules.loading: loading sale/wizard/sale_payment_link_views.xml 
+2023-06-09 03:16:31,974 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sale: loading base translation file es for language es_PE 
+2023-06-09 03:16:31,983 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\sale\i18n\es.po 
+2023-06-09 03:16:32,125 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sale: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:32,132 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\sale\i18n\es_PE.po 
+2023-06-09 03:16:32,238 22868 INFO ServidorPrueba odoo.modules.loading: Module sale loaded in 3.03s, 2433 queries 
+2023-06-09 03:16:32,238 22868 INFO ServidorPrueba odoo.modules.loading: Loading module sale_management (39/40) 
+2023-06-09 03:16:32,540 22868 INFO ServidorPrueba odoo.modules.registry: module sale_management: creating or updating database tables 
+2023-06-09 03:16:32,944 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/security/sale_management_security.xml 
+2023-06-09 03:16:32,962 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/data/digest_data.xml 
+2023-06-09 03:16:32,978 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/views/sale_portal_templates.xml 
+2023-06-09 03:16:32,994 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/views/sale_order_template_views.xml 
+2023-06-09 03:16:33,023 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/security/ir.model.access.csv 
+2023-06-09 03:16:33,046 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/views/res_config_settings_views.xml 
+2023-06-09 03:16:33,079 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/data/digest_data.xml 
+2023-06-09 03:16:33,091 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/views/sale_management_views.xml 
+2023-06-09 03:16:33,156 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/views/digest_views.xml 
+2023-06-09 03:16:33,172 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/views/sale_order_views.xml 
+2023-06-09 03:16:33,203 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_management/report/sale_report_templates.xml 
+2023-06-09 03:16:33,222 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sale_management: loading base translation file es for language es_PE 
+2023-06-09 03:16:33,228 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\sale_management\i18n\es.po 
+2023-06-09 03:16:33,263 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sale_management: no translation for language es_PE 
+2023-06-09 03:16:33,288 22868 INFO ServidorPrueba odoo.modules.loading: Module sale_management loaded in 1.05s, 584 queries 
+2023-06-09 03:16:33,288 22868 INFO ServidorPrueba odoo.modules.loading: Loading module sale_sms (40/40) 
+2023-06-09 03:16:33,548 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_sms/security/ir.model.access.csv 
+2023-06-09 03:16:33,655 22868 INFO ServidorPrueba odoo.modules.loading: loading sale_sms/security/security.xml 
+2023-06-09 03:16:33,673 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module sale_sms: no translation for language es_PE 
+2023-06-09 03:16:33,678 22868 INFO ServidorPrueba odoo.modules.loading: Module sale_sms loaded in 0.39s, 44 queries 
+2023-06-09 03:16:33,678 22868 INFO ServidorPrueba odoo.modules.loading: 40 modules loaded in 35.63s, 22092 queries (+0 extra) 
+2023-06-09 03:16:33,685 22868 INFO ServidorPrueba odoo.modules.loading: loading 49 modules... 
+2023-06-09 03:16:33,685 22868 INFO ServidorPrueba odoo.modules.loading: Loading module base_address_city (2/49) 
+2023-06-09 03:16:33,945 22868 INFO ServidorPrueba odoo.modules.registry: module base_address_city: creating or updating database tables 
+2023-06-09 03:16:34,190 22868 INFO ServidorPrueba odoo.modules.loading: loading base_address_city/security/ir.model.access.csv 
+2023-06-09 03:16:34,204 22868 INFO ServidorPrueba odoo.modules.loading: loading base_address_city/views/res_city_view.xml 
+2023-06-09 03:16:34,225 22868 INFO ServidorPrueba odoo.modules.loading: loading base_address_city/views/res_country_view.xml 
+2023-06-09 03:16:34,247 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_address_city: loading base translation file es for language es_PE 
+2023-06-09 03:16:34,253 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_address_city\i18n\es.po 
+2023-06-09 03:16:34,273 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_address_city: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:34,279 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_address_city\i18n\es_PE.po 
+2023-06-09 03:16:34,302 22868 INFO ServidorPrueba odoo.modules.loading: Module base_address_city loaded in 0.62s, 166 queries 
+2023-06-09 03:16:34,302 22868 INFO ServidorPrueba odoo.modules.loading: Loading module base_address_extended (3/49) 
+2023-06-09 03:16:34,559 22868 INFO ServidorPrueba odoo.modules.registry: module base_address_extended: creating or updating database tables 
+2023-06-09 03:16:34,624 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.street_name 
+2023-06-09 03:16:34,624 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.street_number 
+2023-06-09 03:16:34,624 22868 INFO ServidorPrueba odoo.models: Storing computed values of res.partner.street_number2 
+2023-06-09 03:16:34,735 22868 INFO ServidorPrueba odoo.modules.loading: loading base_address_extended/views/base_address_extended.xml 
+2023-06-09 03:16:34,795 22868 INFO ServidorPrueba odoo.modules.loading: loading base_address_extended/data/base_address_extended_data.xml 
+2023-06-09 03:16:34,814 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_address_extended: loading base translation file es for language es_PE 
+2023-06-09 03:16:34,822 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_address_extended\i18n\es.po 
+2023-06-09 03:16:34,839 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_address_extended: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:34,845 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_address_extended\i18n\es_PE.po 
+2023-06-09 03:16:34,869 22868 INFO ServidorPrueba odoo.modules.loading: Module base_address_extended loaded in 0.57s, 207 queries 
+2023-06-09 03:16:34,870 22868 INFO ServidorPrueba odoo.modules.loading: Loading module contacts (22/49) 
+2023-06-09 03:16:35,121 22868 INFO ServidorPrueba odoo.modules.registry: module contacts: creating or updating database tables 
+2023-06-09 03:16:35,155 22868 INFO ServidorPrueba odoo.modules.loading: loading contacts/views/contact_views.xml 
+2023-06-09 03:16:35,387 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module contacts: loading base translation file es for language es_PE 
+2023-06-09 03:16:35,394 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\contacts\i18n\es.po 
+2023-06-09 03:16:35,411 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module contacts: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:35,416 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\contacts\i18n\es_PE.po 
+2023-06-09 03:16:35,435 22868 INFO ServidorPrueba odoo.modules.loading: Module contacts loaded in 0.57s, 238 queries 
+2023-06-09 03:16:35,435 22868 INFO ServidorPrueba odoo.modules.loading: Loading module account_debit_note (36/49) 
+2023-06-09 03:16:35,695 22868 INFO ServidorPrueba odoo.modules.registry: module account_debit_note: creating or updating database tables 
+2023-06-09 03:16:35,884 22868 INFO ServidorPrueba odoo.modules.loading: loading account_debit_note/wizard/account_debit_note_view.xml 
+2023-06-09 03:16:35,903 22868 INFO ServidorPrueba odoo.modules.loading: loading account_debit_note/views/account_move_view.xml 
+2023-06-09 03:16:35,927 22868 INFO ServidorPrueba odoo.modules.loading: loading account_debit_note/security/ir.model.access.csv 
+2023-06-09 03:16:35,944 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account_debit_note: loading base translation file es for language es_PE 
+2023-06-09 03:16:35,950 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\account_debit_note\i18n\es.po 
+2023-06-09 03:16:35,972 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account_debit_note: no translation for language es_PE 
+2023-06-09 03:16:35,983 22868 INFO ServidorPrueba odoo.modules.loading: Module account_debit_note loaded in 0.55s, 147 queries 
+2023-06-09 03:16:35,983 22868 INFO ServidorPrueba odoo.modules.loading: Loading module base_vat (38/49) 
+2023-06-09 03:16:36,380 22868 INFO ServidorPrueba odoo.modules.registry: module base_vat: creating or updating database tables 
+2023-06-09 03:16:36,559 22868 INFO ServidorPrueba odoo.modules.loading: loading base_vat/views/res_company_views.xml 
+2023-06-09 03:16:36,576 22868 INFO ServidorPrueba odoo.modules.loading: loading base_vat/views/res_partner_views.xml 
+2023-06-09 03:16:36,606 22868 INFO ServidorPrueba odoo.modules.loading: loading base_vat/views/res_config_settings_views.xml 
+2023-06-09 03:16:36,641 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_vat: loading base translation file es for language es_PE 
+2023-06-09 03:16:36,647 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_vat\i18n\es.po 
+2023-06-09 03:16:36,742 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module base_vat: loading translation file (es_PE) for language es_PE 
+2023-06-09 03:16:36,748 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\base_vat\i18n\es_PE.po 
+2023-06-09 03:16:36,766 22868 INFO ServidorPrueba odoo.modules.loading: Module base_vat loaded in 0.78s, 158 queries 
+2023-06-09 03:16:36,766 22868 INFO ServidorPrueba odoo.modules.loading: Loading module account_edi_ubl_cii (42/49) 
+2023-06-09 03:16:37,795 22868 INFO ServidorPrueba odoo.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2023-06-09 03:16:37,911 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi_ubl_cii/data/account_edi_data.xml 
+2023-06-09 03:16:37,924 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2023-06-09 03:16:37,953 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2023-06-09 03:16:37,998 22868 INFO ServidorPrueba odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2023-06-09 03:16:38,019 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module account_edi_ubl_cii: no translation for language es_PE 
+2023-06-09 03:16:38,026 22868 INFO ServidorPrueba odoo.modules.loading: Module account_edi_ubl_cii loaded in 1.26s, 166 queries 
+2023-06-09 03:16:38,027 22868 INFO ServidorPrueba odoo.modules.loading: Loading module l10n_latam_base (43/49) 
+2023-06-09 03:16:38,307 22868 INFO ServidorPrueba odoo.modules.registry: module l10n_latam_base: creating or updating database tables 
+2023-06-09 03:16:38,648 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_base/data/l10n_latam.identification.type.csv 
+2023-06-09 03:16:38,659 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_base/views/res_partner_view.xml 
+2023-06-09 03:16:38,684 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_base/views/l10n_latam_identification_type_view.xml 
+2023-06-09 03:16:38,715 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_base/security/ir.model.access.csv 
+2023-06-09 03:16:38,736 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module l10n_latam_base: loading base translation file es for language es_PE 
+2023-06-09 03:16:38,742 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\l10n_latam_base\i18n\es.po 
+2023-06-09 03:16:38,763 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module l10n_latam_base: no translation for language es_PE 
+2023-06-09 03:16:38,779 22868 INFO ServidorPrueba odoo.modules.loading: Module l10n_latam_base loaded in 0.75s, 186 queries 
+2023-06-09 03:16:38,780 22868 INFO ServidorPrueba odoo.modules.loading: Loading module l10n_latam_invoice_document (44/49) 
+2023-06-09 03:16:39,119 22868 INFO ServidorPrueba odoo.modules.registry: module l10n_latam_invoice_document: creating or updating database tables 
+2023-06-09 03:16:39,410 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/views/account_journal_view.xml 
+2023-06-09 03:16:39,429 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/views/account_move_line_view.xml 
+2023-06-09 03:16:39,443 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/views/account_move_view.xml 
+2023-06-09 03:16:39,477 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/views/l10n_latam_document_type_view.xml 
+2023-06-09 03:16:39,505 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/views/report_templates.xml 
+2023-06-09 03:16:39,538 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/report/invoice_report_view.xml 
+2023-06-09 03:16:39,554 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/wizards/account_move_reversal_view.xml 
+2023-06-09 03:16:39,569 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_latam_invoice_document/security/ir.model.access.csv 
+2023-06-09 03:16:39,587 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module l10n_latam_invoice_document: loading base translation file es for language es_PE 
+2023-06-09 03:16:39,593 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\l10n_latam_invoice_document\i18n\es.po 
+2023-06-09 03:16:39,617 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module l10n_latam_invoice_document: no translation for language es_PE 
+2023-06-09 03:16:39,630 22868 INFO ServidorPrueba odoo.modules.loading: Module l10n_latam_invoice_document loaded in 0.85s, 373 queries 
+2023-06-09 03:16:39,630 22868 INFO ServidorPrueba odoo.modules.loading: Loading module l10n_pe (47/49) 
+2023-06-09 03:16:39,938 22868 INFO ServidorPrueba odoo.modules.registry: module l10n_pe: creating or updating database tables 
+2023-06-09 03:16:40,194 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/security/ir.model.access.csv 
+2023-06-09 03:16:40,208 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/views/account_tax_view.xml 
+2023-06-09 03:16:40,222 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/l10n_pe_chart_data.xml 
+2023-06-09 03:16:40,262 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/account.group.template.csv 
+2023-06-09 03:16:40,401 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/account.account.template.csv 
+2023-06-09 03:16:44,611 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/l10n_pe_chart_post_data.xml 
+2023-06-09 03:16:44,623 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/account_tax_group_data.xml 
+2023-06-09 03:16:44,650 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/account_tax_data.xml 
+2023-06-09 03:16:44,717 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/fiscal_position_data.xml 
+2023-06-09 03:16:44,736 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/l10n_latam_document_type_data.xml 
+2023-06-09 03:16:44,760 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/account_chart_template_data.xml 
+2023-06-09 03:16:51,050 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/res.city.csv 
+2023-06-09 03:16:51,246 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/l10n_pe.res.city.district.csv 
+2023-06-09 03:16:52,483 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/res_country_data.xml 
+2023-06-09 03:16:52,505 22868 INFO ServidorPrueba odoo.modules.loading: loading l10n_pe/data/l10n_latam_identification_type_data.xml 
+2023-06-09 03:16:52,536 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module l10n_pe: loading base translation file es for language es_PE 
+2023-06-09 03:16:52,543 22868 INFO ServidorPrueba odoo.tools.translate: loading C:\Program Files\Odoo 15.0\server\odoo\addons\l10n_pe\i18n\es.po 
+2023-06-09 03:16:52,568 22868 INFO ServidorPrueba odoo.addons.base.models.ir_translation: module l10n_pe: no translation for language es_PE 
+2023-06-09 03:16:52,587 22868 INFO ServidorPrueba odoo.modules.loading: Module l10n_pe loaded in 12.96s, 13745 queries 
+2023-06-09 03:16:52,587 22868 INFO ServidorPrueba odoo.modules.loading: 49 modules loaded in 18.90s, 15386 queries (+0 extra) 
+2023-06-09 03:16:53,080 22868 INFO ServidorPrueba odoo.modules.loading: Modules loaded. 
+2023-06-09 03:16:53,184 22868 INFO ServidorPrueba odoo.modules.registry: Registry loaded in 55.944s 
+2023-06-09 03:16:53,184 22868 INFO ServidorPrueba odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2023-06-09 03:16:53,194 22868 INFO ServidorPrueba odoo.modules.registry: Registry changed, signaling through the database 
+2023-06-09 03:16:53,196 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:16:53] "POST /web/dataset/call_button HTTP/1.1" 200 - 39378 21.004 35.171
+2023-06-09 03:16:53,214 22868 INFO ServidorPrueba odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-06-09 03:17:06,270 22868 INFO ServidorPrueba odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-06-09 03:17:06,285 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:06] "GET /web HTTP/1.1" 200 - 391 0.252 12.820
+2023-06-09 03:17:06,636 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:06] "GET /web/assets/90-5502acc/web.assets_backend.min.css HTTP/1.1" 200 - 4 0.005 0.025
+2023-06-09 03:17:06,637 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:06] "GET /web/assets/89-0a0198e/web.assets_common.min.css HTTP/1.1" 200 - 4 0.008 0.024
+2023-06-09 03:17:06,728 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:06] "GET /web/webclient/translations/8de5e0de5d81b646b633ce7a49cbfb916eb7b731?lang=es_PE HTTP/1.1" 200 - 5 0.028 0.066
+2023-06-09 03:17:06,876 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:06] "GET /web/assets/91-0a0198e/web.assets_common.min.js HTTP/1.1" 200 - 3 0.007 0.263
+2023-06-09 03:17:06,975 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:06] "GET /web/assets/93-17e5119/web.assets_backend_prod_only.min.js HTTP/1.1" 200 - 2 0.004 0.015
+2023-06-09 03:17:07,208 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:07] "GET /web/assets/92-5502acc/web.assets_backend.min.js HTTP/1.1" 200 - 2 0.000 0.347
+2023-06-09 03:17:07,504 22868 INFO ServidorPrueba odoo.addons.partner_autocomplete.models.res_company: Starting enrich of company My Company (1) 
+2023-06-09 03:17:07,524 22868 INFO ServidorPrueba odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-06-09 03:17:07,526 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:07] "POST /web/dataset/call_kw/res.company/iap_enrich_auto HTTP/1.1" 200 - 18 0.030 0.019
+2023-06-09 03:17:07,887 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:07] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 4 0.011 0.013
+2023-06-09 03:17:07,894 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:07] "POST /web/action/load HTTP/1.1" 200 - 9 0.021 0.009
+2023-06-09 03:17:07,908 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:07] "POST /longpolling/poll HTTP/1.1" 200 - 19 0.031 0.015
+2023-06-09 03:17:07,913 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:07] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 20 0.026 0.022
+2023-06-09 03:17:08,139 22868 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2023-06-09 03:17:08,288 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:08] "GET /web/image/res.company/1/favicon HTTP/1.1" 200 - 11 0.016 0.017
+2023-06-09 03:17:08,325 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:08] "POST /mail/init_messaging HTTP/1.1" 200 - 57 0.058 0.045
+2023-06-09 03:17:08,348 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:08] "POST /longpolling/im_status HTTP/1.1" 200 - 4 0.003 0.009
+2023-06-09 03:17:08,676 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:08] "POST /mail/load_message_failures HTTP/1.1" 200 - 3 0.022 0.014
+2023-06-09 03:17:08,687 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:08] "POST /mail/inbox/messages HTTP/1.1" 200 - 8 0.027 0.016
+2023-06-09 03:17:08,829 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:08] "POST /longpolling/poll HTTP/1.1" 200 - 14 0.009 0.691
+2023-06-09 03:17:08,858 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:08] "POST /web/dataset/call_kw/mail.channel/init_odoobot HTTP/1.1" 200 - 79 0.068 0.149
+2023-06-09 03:17:58,762 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:58] "POST /longpolling/im_status HTTP/1.1" 200 - 4 0.001 0.008
+2023-06-09 03:17:59,175 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:17:59] "POST /longpolling/poll HTTP/1.1" 200 - 9 0.013 50.018
+2023-06-09 03:18:49,425 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:18:49] "POST /longpolling/im_status HTTP/1.1" 200 - 4 0.001 0.007
+2023-06-09 03:18:49,525 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:18:49] "POST /longpolling/poll HTTP/1.1" 200 - 9 0.012 50.023
+2023-06-09 03:19:39,847 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:19:39] "POST /longpolling/poll HTTP/1.1" 200 - 9 0.003 50.014
+2023-06-09 03:19:40,775 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:19:40] "POST /longpolling/im_status HTTP/1.1" 200 - 4 0.006 0.032
+2023-06-09 03:20:29,882 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:20:29] "POST /longpolling/poll HTTP/1.1" 200 - 9 0.009 50.020
+2023-06-09 03:20:31,431 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:20:31] "POST /longpolling/im_status HTTP/1.1" 200 - 4 0.003 0.005
+2023-06-09 03:20:57,026 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:20:57] "GET /web/image/mail.channel/1/avatar_128?unique=f61ffdf17c4202241174f3a0f1e6ff99bc34cfb11b582f29490862bf38d4370439809ee982b002bbd488aa9dd1d9c3ea6176349f2642eb443f8a1b08f0d2db77 HTTP/1.1" 200 - 3 0.005 0.020
+2023-06-09 03:20:57,039 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:20:57] "GET /web/image/res.company/1/favicon HTTP/1.1" 200 - 4 0.012 0.028
+2023-06-09 03:20:57,079 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:20:57] "GET /web/image/res.partner/2/avatar_128 HTTP/1.1" 200 - 7 0.023 0.035
+2023-06-09 03:20:58,778 22868 INFO ? werkzeug: 127.0.0.1 - - [09/Jun/2023 03:20:58] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 - - - -
+2023-06-09 03:21:20,217 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:21:20] "POST /longpolling/poll HTTP/1.1" 200 - 9 0.005 50.019
+2023-06-09 03:21:22,439 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:21:22] "POST /longpolling/im_status HTTP/1.1" 200 - 4 0.004 0.013
+2023-06-09 03:21:54,198 22868 INFO ? odoo.service.server: Initiating shutdown 
+2023-06-09 03:21:54,199 22868 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2023-06-09 03:21:54,443 22868 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 6 connections  
+2023-06-09 03:21:54,512 22868 INFO ServidorPrueba werkzeug: 127.0.0.1 - - [09/Jun/2023 03:21:54] "POST /longpolling/poll HTTP/1.1" 200 - 9 0.006 33.968
